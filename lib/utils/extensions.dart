@@ -32,12 +32,14 @@ extension StringExtension on String {
       return 'Passcode must contain only digits.';
     }
 
-    // Check for repeated digits more than 2 times
+    // Check for digits repeated more than 2 times
     for (int i = 0; i < length - 2; i++) {
       if (this[i] == this[i + 1] && this[i] == this[i + 2]) {
         return 'Passcode cannot have repeating digits more than 2 times.';
       }
     }
+
+    // check for simple sequence
     bool isSimpleSequence = true;
     for (int i = 0; i < length - 1; i++) {
       if (int.parse(this[i]) + 1 != int.parse(this[i + 1])) {

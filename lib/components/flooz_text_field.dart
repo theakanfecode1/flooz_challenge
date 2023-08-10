@@ -5,18 +5,18 @@ import 'package:flutter/material.dart';
 
 class FloozTextField extends StatefulWidget {
   final String title;
+  final String? errorMessage;
   final TextEditingController controller;
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
-  final String? Function(String?)? validator;
   final Function(String)? onTextChanged;
 
   const FloozTextField(
       {Key? key,
       this.keyboardType = TextInputType.text,
-      required this.validator,
       required this.title,
       required this.onTextChanged,
+       this.errorMessage,
       this.textInputAction = TextInputAction.next,
       required this.controller})
       : super(key: key);
@@ -45,7 +45,6 @@ class _FloozTextFieldState extends State<FloozTextField> {
           maxLines: 1,
           textInputAction: widget.textInputAction,
           keyboardType: widget.keyboardType,
-          validator: widget.validator,
           onChanged: widget.onTextChanged,
           decoration: InputDecoration(
             filled: true,
@@ -53,6 +52,7 @@ class _FloozTextFieldState extends State<FloozTextField> {
             fillColor: AppColors.grey400,
             errorMaxLines: 3,
             isDense: true,
+            errorText: widget.errorMessage,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12.0),
               borderSide: const BorderSide(

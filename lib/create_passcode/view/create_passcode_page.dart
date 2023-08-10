@@ -2,21 +2,21 @@ import 'package:flooz_challenge/components/flooz_button.dart';
 import 'package:flooz_challenge/components/flooz_text_field.dart';
 import 'package:flooz_challenge/components/pin_code/flooz_pin_code_text_field.dart';
 import 'package:flooz_challenge/components/pin_code/pin_theme.dart';
-import 'package:flooz_challenge/home/screen/home_screen.dart';
+import 'package:flooz_challenge/home/view/home_page.dart';
 import 'package:flooz_challenge/res/style/app_colors.dart';
 import 'package:flooz_challenge/res/style/app_text_styles.dart';
 import 'package:flooz_challenge/res/style/app_spacings.dart';
 import 'package:flooz_challenge/utils/nav_utils.dart';
 import 'package:flutter/material.dart';
 
-class CreatePasscodeScreen extends StatefulWidget {
-  const CreatePasscodeScreen({Key? key}) : super(key: key);
+class CreatePasscodePage extends StatefulWidget {
+  const CreatePasscodePage({Key? key}) : super(key: key);
 
   @override
-  State<CreatePasscodeScreen> createState() => _CreatePasscodeScreenState();
+  State<CreatePasscodePage> createState() => _CreatePasscodePageState();
 }
 
-class _CreatePasscodeScreenState extends State<CreatePasscodeScreen> {
+class _CreatePasscodePageState extends State<CreatePasscodePage> {
   final TextEditingController _pinCodeTextEditingController =
       TextEditingController();
 
@@ -119,7 +119,7 @@ class _CreatePasscodeScreenState extends State<CreatePasscodeScreen> {
                   ),
                   FloozButton(
                       onTap: () {
-                        popAllAndPush(const HomeScreen());
+                        popAllAndPush(const HomePage());
                       },
                       label: 'Confirm'),
                   const SizedBox(

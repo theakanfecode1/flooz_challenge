@@ -1,4 +1,4 @@
-import 'package:flooz_challenge/create_account/screen/create_account_screen.dart';
+import 'package:flooz_challenge/create_account/view/create_account_page.dart';
 import 'package:flooz_challenge/res/style/app_colors.dart';
 import 'package:flooz_challenge/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           fontFamily: ('AlbertSans' ),
           colorScheme:
           ColorScheme.fromSwatch().copyWith(secondary: AppColors.black)),
-      home:  const CreateAccountScreen(),
+      home:  const CreateAccountPage(),
     );
   }
 }

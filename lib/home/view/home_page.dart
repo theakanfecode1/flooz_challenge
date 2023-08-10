@@ -1,19 +1,19 @@
 import 'package:flooz_challenge/components/flooz_button.dart';
-import 'package:flooz_challenge/create_account/screen/create_account_screen.dart';
+import 'package:flooz_challenge/create_account/view/create_account_page.dart';
 import 'package:flooz_challenge/res/style/app_colors.dart';
 import 'package:flooz_challenge/res/style/app_text_styles.dart';
 import 'package:flooz_challenge/res/style/app_spacings.dart';
 import 'package:flooz_challenge/utils/nav_utils.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Expanded(
                       child: FloozButton(
                     onTap: () {
-                      pushWithReplacement( const CreateAccountScreen());
+                      pushWithReplacement( const CreateAccountPage());
                     },
                     label: 'Clear Account',
                     backgroundColor: AppColors.grey700,
@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: AppSpacings.m,
                   ),
                   Expanded(child: FloozButton(onTap: () {
-                    pushWithReplacement( const CreateAccountScreen());
+                    pushWithReplacement( const CreateAccountPage());
                   }, label: 'Log out')),
                 ],
               )

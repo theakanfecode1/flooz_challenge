@@ -19,17 +19,6 @@ class CreateAccountForm extends StatefulWidget {
 }
 
 class _CreateAccountFormState extends State<CreateAccountForm> {
-  final TextEditingController _nameTextEditingController =
-      TextEditingController();
-  final TextEditingController _emailTextEditingController =
-      TextEditingController();
-
-  @override
-  void dispose() {
-    _nameTextEditingController.dispose();
-    _emailTextEditingController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +59,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
                             .read<CreateAccountBloc>()
                             .add(NameChanged(name: text));
                       },
-                      controller: _nameTextEditingController);
+                  );
                 },
               ),
               const SizedBox(
@@ -87,9 +76,8 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
                     onTextChanged: (text) {
                       context
                           .read<CreateAccountBloc>()
-                          .add(EmailChanged(email: text));
-                    },
-                    controller: _emailTextEditingController);
+                          .add(EmailChanged(email: text.toLowerCase()));
+                    },);
               }),
             ],
           )),

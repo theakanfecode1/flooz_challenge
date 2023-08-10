@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class FloozTextField extends StatefulWidget {
   final String title;
   final String? errorMessage;
-  final TextEditingController controller;
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
   final Function(String)? onTextChanged;
@@ -17,8 +16,7 @@ class FloozTextField extends StatefulWidget {
       required this.title,
       required this.onTextChanged,
        this.errorMessage,
-      this.textInputAction = TextInputAction.next,
-      required this.controller})
+      this.textInputAction = TextInputAction.next,})
       : super(key: key);
 
   @override
@@ -39,7 +37,6 @@ class _FloozTextFieldState extends State<FloozTextField> {
           height: AppSpacings.xm,
         ),
         TextFormField(
-          controller: widget.controller,
           cursorColor: AppColors.black,
           textAlignVertical: TextAlignVertical.center,
           maxLines: 1,

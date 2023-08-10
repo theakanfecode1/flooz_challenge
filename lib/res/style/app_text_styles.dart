@@ -16,7 +16,7 @@ class AppTextStyles {
   static const kB1 = TextStyle(
     fontSize: 16.0,
     color: AppColors.black,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
   );
   static const kB1Grey = TextStyle(
     fontSize: 16.0,

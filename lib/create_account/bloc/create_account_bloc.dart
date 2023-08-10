@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_event.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_state.dart';
 import 'package:flooz_challenge/create_account/models/email.dart';

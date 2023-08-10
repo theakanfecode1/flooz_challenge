@@ -1,8 +1,8 @@
 import 'package:flooz_challenge/components/flooz_button.dart';
 import 'package:flooz_challenge/create_account/view/create_account_page.dart';
 import 'package:flooz_challenge/res/style/app_colors.dart';
-import 'package:flooz_challenge/res/style/app_text_styles.dart';
 import 'package:flooz_challenge/res/style/app_spacings.dart';
+import 'package:flooz_challenge/res/style/app_text_styles.dart';
 import 'package:flooz_challenge/utils/nav_utils.dart';
 import 'package:flutter/material.dart';
 

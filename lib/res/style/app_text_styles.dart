@@ -20,13 +20,13 @@ class AppTextStyles {
   );
   static const kB1Grey = TextStyle(
     fontSize: 16.0,
-    color: AppColors.grey,
+    color: AppColors.grey600,
     fontWeight: FontWeight.w500,
   );
 
   static const kButtonTitle = TextStyle(
     fontSize: 18.0,
-    color: AppColors.white,
+    color: AppColors.grey400,
     fontWeight: FontWeight.w600,
   );
 

@@ -50,6 +50,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
                 buildWhen: (previous, current) => previous.name != current.name,
                 builder: (context, state) {
                   return FloozTextField(
+                    key: Key('createAccount_name_textField'),
                       title: 'Name',
                       errorMessage: state.name.displayError != null
                           ? 'Name must be a valid string with at least 2 characters, containing only letters.'
@@ -69,6 +70,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
                   buildWhen: (previous, current) => previous.email != current.email,
                   builder: (context, state) {
                 return FloozTextField(
+                  key: Key('createAccount_email_textField'),
                     title: 'Email',
                     errorMessage: state.email.displayError != null
                         ? 'Please ensure the email entered is valid.'
@@ -88,6 +90,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
               buildWhen: (previous, current) => previous.status != current.status,
               builder: (context, state) {
             return FloozButton(
+              key: Key('createAccount_continue_appButton'),
                 onTap: () {
                   context.read<CreateAccountBloc>().add(const FormSubmitted());
                 },

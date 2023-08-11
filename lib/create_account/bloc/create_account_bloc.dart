@@ -57,6 +57,9 @@ class CreateAccountBloc extends Bloc<CreateAccountEvent, CreateAccountState> {
       emit(state.copyWith(status: FormzSubmissionStatus.inProgress));
       _userRepository.setUser(name.value, email.value);
       emit(state.copyWith(status: FormzSubmissionStatus.success));
+    }else{
+      emit(state.copyWith(status: FormzSubmissionStatus.inProgress));
+      emit(state.copyWith(status: FormzSubmissionStatus.failure));
     }
   }
 }

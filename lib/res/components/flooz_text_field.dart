@@ -37,6 +37,7 @@ class _FloozTextFieldState extends State<FloozTextField> {
           height: AppSpacings.xm,
         ),
         TextFormField(
+          key: widget.key,
           cursorColor: AppColors.black,
           textAlignVertical: TextAlignVertical.center,
           maxLines: 1,

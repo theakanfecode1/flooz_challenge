@@ -3,15 +3,10 @@ import 'package:flooz_challenge/res/style/app_colors.dart';
 import 'package:flooz_challenge/res/style/app_spacings.dart';
 import 'package:flutter/material.dart';
 
-class CreateAccountPage extends StatefulWidget {
+class CreateAccountPage extends StatelessWidget {
+  static Page<void> page() =>
+      const MaterialPage<void>(child: CreateAccountPage());
   const CreateAccountPage({Key? key}) : super(key: key);
-
-  @override
-  State<CreateAccountPage> createState() => _CreateAccountPageState();
-}
-
-class _CreateAccountPageState extends State<CreateAccountPage> {
-
 
   @override
   Widget build(BuildContext context) {

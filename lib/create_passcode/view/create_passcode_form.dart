@@ -62,6 +62,7 @@ class _CreatePasscodeFormState extends State<CreatePasscodeForm> {
                   builder: (context, state) {
                     bool hasError = state.passcode.displayError != null;
                     return FloozPinCodeTextField(
+                      key: Key('createPasscode_passcode_TextInput'),
                       context: context,
                       length: 6,
                       pinTheme: PinTheme(
@@ -99,6 +100,7 @@ class _CreatePasscodeFormState extends State<CreatePasscodeForm> {
               buildWhen: (previous, current) => previous.status != current.status,
               builder: (context, state) {
                 return FloozButton(
+                  key: Key('createPasscode_continue_appButton'),
                     onTap: () {
                       context.read<CreatePasscodeBloc>().add(const FormSubmitted());
                     },

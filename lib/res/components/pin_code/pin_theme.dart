@@ -1,4 +1,4 @@
-import 'package:flooz_challenge/components/pin_code/flooz_pin_code_text_field.dart';
+import 'package:flooz_challenge/res/components/pin_code/flooz_pin_code_text_field.dart';
 import 'package:flutter/material.dart';
 
 class PinTheme {

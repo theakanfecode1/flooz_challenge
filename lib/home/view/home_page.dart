@@ -1,6 +1,6 @@
 import 'package:flooz_challenge/authentication/bloc/authentication_bloc.dart';
 import 'package:flooz_challenge/authentication/bloc/authentication_event.dart';
-import 'package:flooz_challenge/components/flooz_button.dart';
+import 'package:flooz_challenge/res/components/flooz_button.dart';
 import 'package:flooz_challenge/res/style/app_colors.dart';
 import 'package:flooz_challenge/res/style/app_spacings.dart';
 import 'package:flooz_challenge/res/style/app_text_styles.dart';

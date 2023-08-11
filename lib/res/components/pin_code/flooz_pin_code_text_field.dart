@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:flooz_challenge/components/pin_code/cursor_painter.dart';
-import 'package:flooz_challenge/components/pin_code/pin_theme.dart';
+import 'package:flooz_challenge/res/components/pin_code/cursor_painter.dart';
+import 'package:flooz_challenge/res/components/pin_code/pin_theme.dart';
 import 'package:flooz_challenge/res/style/app_colors.dart';
 import 'package:flooz_challenge/res/style/app_text_styles.dart';
 import 'package:flutter/foundation.dart';

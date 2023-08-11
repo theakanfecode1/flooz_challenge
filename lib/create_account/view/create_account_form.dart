@@ -1,5 +1,5 @@
-import 'package:flooz_challenge/components/flooz_button.dart';
-import 'package:flooz_challenge/components/flooz_text_field.dart';
+import 'package:flooz_challenge/res/components/flooz_button.dart';
+import 'package:flooz_challenge/res/components/flooz_text_field.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_bloc.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_event.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_state.dart';

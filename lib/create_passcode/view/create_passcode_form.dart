@@ -1,6 +1,6 @@
-import 'package:flooz_challenge/components/flooz_button.dart';
-import 'package:flooz_challenge/components/pin_code/flooz_pin_code_text_field.dart';
-import 'package:flooz_challenge/components/pin_code/pin_theme.dart';
+import 'package:flooz_challenge/res/components/flooz_button.dart';
+import 'package:flooz_challenge/res/components/pin_code/flooz_pin_code_text_field.dart';
+import 'package:flooz_challenge/res/components/pin_code/pin_theme.dart';
 import 'package:flooz_challenge/create_passcode/bloc/create_passcode_bloc.dart';
 import 'package:flooz_challenge/create_passcode/bloc/create_passcode_event.dart';
 import 'package:flooz_challenge/create_passcode/bloc/create_passcode_state.dart';

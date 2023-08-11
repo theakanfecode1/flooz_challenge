@@ -4,13 +4,11 @@ import 'package:flooz_challenge/components/pin_code/pin_theme.dart';
 import 'package:flooz_challenge/create_passcode/bloc/create_passcode_bloc.dart';
 import 'package:flooz_challenge/create_passcode/bloc/create_passcode_event.dart';
 import 'package:flooz_challenge/create_passcode/bloc/create_passcode_state.dart';
-import 'package:flooz_challenge/home/view/home_page.dart';
 import 'package:flooz_challenge/res/style/app_colors.dart';
 import 'package:flooz_challenge/res/style/app_spacings.dart';
 import 'package:flooz_challenge/res/style/app_text_styles.dart';
 import 'package:flooz_challenge/res/ui_helpers.dart';
 import 'package:flooz_challenge/utils/extensions.dart';
-import 'package:flooz_challenge/utils/nav_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
@@ -29,9 +27,6 @@ class _CreatePasscodeFormState extends State<CreatePasscodeForm> {
     return BlocListener<CreatePasscodeBloc, CreatePasscodeState>(
       listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
-        if (state.status.isSuccess) {
-          popAllAndPush(const HomePage());
-        }
         if (state.status.isFailure) {
           showErrorToast(context,state.passcode.getErrorMessage);
         }

@@ -14,14 +14,14 @@ class _MockAuthenticationRepository extends Mock
 class _MockUserRepository extends Mock implements UserRepository {}
 
 void main() {
-  const user = User('daniel','dan@ogundiran.com');
+  const user = User('daniel', 'dan@ogundiran.com');
   late AuthenticationRepository authenticationRepository;
   late UserRepository userRepository;
 
   setUp(() {
     authenticationRepository = _MockAuthenticationRepository();
     when(
-          () => authenticationRepository.status,
+      () => authenticationRepository.status,
     ).thenAnswer((_) => const Stream.empty());
     userRepository = _MockUserRepository();
   });
@@ -40,7 +40,7 @@ void main() {
       'emits [unauthenticated] when status is unauthenticated',
       setUp: () {
         when(() => authenticationRepository.status).thenAnswer(
-              (_) => Stream.value(AuthenticationStatus.unauthenticated),
+          (_) => Stream.value(AuthenticationStatus.unauthenticated),
         );
       },
       build: () => AuthenticationBloc(
@@ -56,7 +56,7 @@ void main() {
       'emits [authenticated] when status is authenticated',
       setUp: () {
         when(() => authenticationRepository.status).thenAnswer(
-              (_) => Stream.value(AuthenticationStatus.authenticated),
+          (_) => Stream.value(AuthenticationStatus.authenticated),
         );
         when(() => userRepository.getUser()).thenAnswer((_) => user);
       },
@@ -75,9 +75,9 @@ void main() {
       'emits [authenticated] when status is authenticated',
       setUp: () {
         when(
-              () => authenticationRepository.status,
+          () => authenticationRepository.status,
         ).thenAnswer((_) => Stream.value(AuthenticationStatus.authenticated));
-        when(() => userRepository.getUser()).thenAnswer((_)  => user);
+        when(() => userRepository.getUser()).thenAnswer((_) => user);
       },
       build: () => AuthenticationBloc(
         authenticationRepository: authenticationRepository,
@@ -92,7 +92,7 @@ void main() {
       'emits [unauthenticated] when status is unauthenticated',
       setUp: () {
         when(
-              () => authenticationRepository.status,
+          () => authenticationRepository.status,
         ).thenAnswer((_) => Stream.value(AuthenticationStatus.unauthenticated));
       },
       build: () => AuthenticationBloc(
@@ -108,7 +108,7 @@ void main() {
       'emits [unauthenticated] when status is authenticated but getUser fails',
       setUp: () {
         when(
-              () => authenticationRepository.status,
+          () => authenticationRepository.status,
         ).thenAnswer((_) => Stream.value(AuthenticationStatus.authenticated));
         when(() => userRepository.getUser()).thenThrow(Exception('oops'));
       },
@@ -123,10 +123,10 @@ void main() {
 
     blocTest<AuthenticationBloc, AuthenticationState>(
       'emits [unauthenticated] when status is authenticated '
-          'but getUser returns null',
+      'but getUser returns null',
       setUp: () {
         when(
-              () => authenticationRepository.status,
+          () => authenticationRepository.status,
         ).thenAnswer((_) => Stream.value(AuthenticationStatus.authenticated));
         when(() => userRepository.getUser()).thenAnswer((_) => null);
       },
@@ -143,7 +143,7 @@ void main() {
       'emits [unknown] when status is unknown',
       setUp: () {
         when(
-              () => authenticationRepository.status,
+          () => authenticationRepository.status,
         ).thenAnswer((_) => Stream.value(AuthenticationStatus.unknown));
       },
       build: () => AuthenticationBloc(
@@ -159,7 +159,7 @@ void main() {
   group('AuthenticationLogoutRequested', () {
     blocTest<AuthenticationBloc, AuthenticationState>(
       'calls logOut on authenticationRepository '
-          'when AuthenticationLogoutRequested is added',
+      'when AuthenticationLogoutRequested is added',
       build: () => AuthenticationBloc(
         authenticationRepository: authenticationRepository,
         userRepository: userRepository,

@@ -4,14 +4,11 @@ import 'package:flooz_challenge/res/style/app_spacings.dart';
 import 'package:flooz_challenge/utils/nav_utils.dart';
 import 'package:flutter/material.dart';
 
-class CreatePasscodePage extends StatefulWidget {
+class CreatePasscodePage extends StatelessWidget {
+  static Page<void> page() =>
+      const MaterialPage<void>(child: CreatePasscodePage());
   const CreatePasscodePage({Key? key}) : super(key: key);
 
-  @override
-  State<CreatePasscodePage> createState() => _CreatePasscodePageState();
-}
-
-class _CreatePasscodePageState extends State<CreatePasscodePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

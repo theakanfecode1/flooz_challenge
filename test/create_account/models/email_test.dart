@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flooz_challenge/create_account/models/email.dart';
-import 'package:flooz_challenge/create_account/models/email.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

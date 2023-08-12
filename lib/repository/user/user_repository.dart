@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flooz_challenge/repository/user/models/user.dart';
 
 class UserRepository {

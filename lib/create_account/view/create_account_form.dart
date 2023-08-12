@@ -1,9 +1,9 @@
-import 'package:flooz_challenge/res/components/flooz_button.dart';
-import 'package:flooz_challenge/res/components/flooz_text_field.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_bloc.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_event.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_state.dart';
 import 'package:flooz_challenge/create_passcode/view/create_passcode_page.dart';
+import 'package:flooz_challenge/res/components/flooz_button.dart';
+import 'package:flooz_challenge/res/components/flooz_text_field.dart';
 import 'package:flooz_challenge/res/style/app_spacings.dart';
 import 'package:flooz_challenge/res/style/app_text_styles.dart';
 import 'package:flooz_challenge/utils/nav_utils.dart';

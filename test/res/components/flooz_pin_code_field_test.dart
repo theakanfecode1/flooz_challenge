@@ -1,5 +1,3 @@
-import 'package:flooz_challenge/res/components/flooz_button.dart';
-import 'package:flooz_challenge/res/components/flooz_text_field.dart';
 import 'package:flooz_challenge/res/components/pin_code/flooz_pin_code_text_field.dart';
 import 'package:flooz_challenge/res/components/pin_code/pin_theme.dart';
 import 'package:flooz_challenge/res/style/app_colors.dart';

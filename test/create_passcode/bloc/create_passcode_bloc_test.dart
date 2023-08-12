@@ -4,7 +4,6 @@ import 'package:flooz_challenge/create_passcode/bloc/create_passcode_event.dart'
 import 'package:flooz_challenge/create_passcode/bloc/create_passcode_state.dart';
 import 'package:flooz_challenge/create_passcode/models/passcode.dart';
 import 'package:flooz_challenge/repository/authentication/authentication_repository.dart';
-import 'package:flooz_challenge/repository/user/user_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:formz/formz.dart';
 import 'package:mocktail/mocktail.dart';

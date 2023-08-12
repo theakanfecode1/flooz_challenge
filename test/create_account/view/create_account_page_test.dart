@@ -4,7 +4,6 @@ import 'package:flooz_challenge/create_account/bloc/create_account_event.dart';
 import 'package:flooz_challenge/create_account/bloc/create_account_state.dart';
 import 'package:flooz_challenge/create_account/view/create_account_form.dart';
 import 'package:flooz_challenge/create_account/view/create_account_page.dart';
-import 'package:flooz_challenge/repository/user/user_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';

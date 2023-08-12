@@ -1,6 +1,4 @@
-import 'package:flooz_challenge/res/components/flooz_button.dart';
 import 'package:flooz_challenge/res/components/flooz_text_field.dart';
-import 'package:flooz_challenge/res/style/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

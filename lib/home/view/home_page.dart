@@ -8,14 +8,12 @@ import 'package:flooz_challenge/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
+
+  static Page<void> page() =>
+      const MaterialPage<void>(child: HomePage());
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,9 +30,13 @@ class _HomePageState extends State<HomePage> {
                 height: AppSpacings.xxxl,
               ),
               Builder(builder: (context) {
-                final title = context.select(
+                final name = context.select(
                   (AuthenticationBloc bloc) =>
-                      '${bloc.state.user.name.capitalizeFirst}\n${bloc.state.user.email.capitalizeFirst}',
+                      bloc.state.user.name.capitalizeFirst,
+                );
+                final email = context.select(
+                  (AuthenticationBloc bloc) =>
+                      bloc.state.user.email.capitalizeFirst,
                 );
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,10 +49,13 @@ class _HomePageState extends State<HomePage> {
                       height: AppSpacings.m,
                     ),
                     Text(
-                      title,
-                      textAlign: TextAlign.center,
+                      name,
                       style: AppTextStyles.kH1,
-                    )
+                    ),
+                    Text(
+                      email,
+                      style: AppTextStyles.kH1,
+                    ),
                   ],
                 );
               }),
@@ -60,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                       child: FloozButton(
                     onTap: () {
-                      logout();
+                      logout(context);
                     },
                     label: 'Clear Account',
                     backgroundColor: AppColors.grey700,
@@ -71,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                       child: FloozButton(
                           onTap: () {
-                            logout();
+                            logout(context);
                           },
                           label: 'Log out')),
                 ],
@@ -83,7 +88,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void logout() {
+  void logout(BuildContext context) {
     context.read<AuthenticationBloc>().add(AuthenticationLogoutRequested());
   }
 }
